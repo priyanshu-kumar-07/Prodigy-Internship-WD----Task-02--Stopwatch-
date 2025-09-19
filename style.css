@@ -1,0 +1,112 @@
+/* Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 15px;
+}
+
+/* Main Container */
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 26px;
+}
+
+/* Display Time */
+#display {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1 1 40%;
+  min-width: 120px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+  color: white;
+}
+
+#startStop { background: #28a745; }
+#lap { background: #007bff; }
+#reset { background: #dc3545; }
+#clearLaps { background: #6c757d; }
+
+.buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Laps List */
+#laps {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#laps li {
+  background: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  #display {
+    font-size: 36px;
+  }
+
+  .buttons button {
+    flex: 1 1 45%;
+    min-width: 100px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
